@@ -1,7 +1,5 @@
 # Weekly Progress — IR Ranging, Localization, and PCB Planning
 
-**Member:** Lily Li  
-**Week:** November 5–12, 2026
 
 ## 1. Work Completed This Week
 
@@ -12,9 +10,9 @@
 
   ![IR ranging measurements](Images/261112-ir-ranging.png)
 
-- **Four-anchor localization:** Used four anchors (UID 1, 7, 10, 15) to estimate the target robot's position from **raw, uncalibrated IR ranges**.
+- **Four-anchor localization:** Used four anchors (1, 7, 10, 15) to estimate the target robot's position from **raw, uncalibrated IR ranges**.
   - Target at **(0, 0) mm**, run 1: **12/13 valid windows**; median-point error **6.505 mm**.
-  - Target at **(0, 0) mm**, run 2: **73/75 valid windows**; median estimate **(−4.612, 8.005) mm**; median-point error **9.239 mm**.
+  - Target at **(0, 0) mm**, run 2: **73/75 valid windows**; median estimate **(−4.612, 8.005) mm**; median-point error **9.239 mm**
   - Target at **(5, 5) mm**: **0/36 valid windows** (missing anchor measurements).
   - Stable estimates do not necessarily indicate accurate positioning; both runs at the origin showed offsets.
 
@@ -26,7 +24,7 @@
 - **Diamond-shaped path experiment:**
   - Investigated a 2025 decentralized swarm localization / formation paper and attempted a diamond-shaped path-following behavior on physical Kilobots.
   - **Not successful:** the robot did not reliably follow the intended edges and turns.
-  - Possible contributors: motor calibration, inconsistent turning, and distance-based control; causes still need to be isolated.
+  - Possible contributors: motor calibration, inconsistent turning, and distance-based control; causes still need to be isolated
 
   ![Diamond-path experiment setup](Images/261112-diamond-test.png)
 
@@ -42,12 +40,11 @@
 - Calibrate IR distance measurements and repeat four-anchor localization tests.
 - Investigate missing-anchor data and improve localization robustness.
 - Refine and test the diamond-shaped path-following algorithm.
-- Implement and test one simple **custom collective behavior** on the existing Kilobots.
 - Compare candidate processors for Kilobot V2 using wireless networking, GPIO, ADC, PWM, size, and power requirements.
 
 ## 4. Thursday Meeting — November 12
 
-### Kilobot V2 PCB Requirements / Options
+### Kilobot V2 PCB Requirements 
 
 | Component | Requirement / Discussion |
 |---|---|
@@ -63,14 +60,3 @@
 | **Modularity** | Allow future interchangeable / add-on hardware modules. |
 | **Power / charging** | Battery powered; legless mechanics and inductive charging are possibilities, not final decisions. |
 
-### Decisions and Action Items
-
-| Topic | Decision / Next Step |
-|---|---|
-| **Collective behavior** | Implement at least one custom collective algorithm before fully shifting to new hardware. |
-| **Processor research** | Each team member researches feasible MCU candidates, including pin count, radio, peripherals, and power. |
-| **Monday, Nov. 16** | Compare processor candidates at 9 PM. |
-| **Thursday, Nov. 19** | Aim to select a processor and clearly justify the choice. |
-| **PCB prototyping** | Start with a few boards and expect multiple iterations before scaling up. |
-
-> **Image paths:** Figures are stored separately under `Weekly-Updates/Images/`. All conclusions above are based on the reported experiments and meeting discussion; options marked as possibilities are not finalized requirements.
