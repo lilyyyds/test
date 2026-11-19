@@ -198,7 +198,7 @@ Illustrative signal processing:
 - Decode the transmitting robot's ID.
 - Align envelope measurements to the same transmitted burst.
 - Calibrate each receiver's angular response and received-strength-versus-range curve.
-- Estimate \u03b8 by comparing the normalized eight-sector signature with calibration data, for example a likelihood lookup / least-squares fit.
+- Estimate θ by comparing the normalized eight-sector signature with calibration data, for example a likelihood lookup / least-squares fit.
 - Estimate distance from calibrated amplitude, potentially conditioned on estimated bearing and ambient illumination.
 
 **Warning:** Received intensity is generally affected by distance, incidence angle, emitter power, receiver gain, surface reflection and nearby robots. It is not enough to write a universal inverse-square formula and declare the distance accurate. Use measured calibration curves and report errors and packet loss.
