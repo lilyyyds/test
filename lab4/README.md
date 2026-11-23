@@ -13,3 +13,13 @@ cd ~/test && git pull                                      # later updates
 ```
 
 Each script asks before every step and remembers which steps are done. Results go to each folder's `results/`. The Week 2 report merges the Week 1 results into a stock-vs-RT `REPORT.md`. See each folder's README for details.
+
+## Uploading results
+
+After the tests (no sudo):
+
+```bash
+cd ~/lab4_git/lab4 && bash push_results.sh
+```
+
+Pushing needs a GitHub token that can write, even though the repo is public. Create a fine-grained token at <https://github.com/settings/tokens?type=beta> with repository access set to `lilyyyds/test` only and **Contents: Read and write**. Run `git config --global credential.helper store` once, then use `lilyyyds` as the username and paste the token as the password. After that you won't be asked again.

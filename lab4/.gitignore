@@ -1,0 +1,4 @@
+# compiled programs inside results/
+**/results/**/build/
+__pycache__/
+*.pyc
