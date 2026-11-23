@@ -18,6 +18,8 @@ sudo bash week2.sh                 # guided: runs every Week 2 test in order
 | 6 | Optional: `blink_v3.py` on RT | yes | — |
 | 7 | `results/REPORT.md`, stock vs RT (merges `../lab4_week1_stock/results`) | no | write-up |
 
+**No oscilloscope?** `sudo bash week2_noscope.sh` runs only the tool check, perf + cyclictest and the report, with no pauses (`--quick` for a 2-min check, `--load 8` for a lighter load).
+
 Use `--list`, `--step N`, `--from N` and `--load N` the same way as in Week 1.
 
 `old_python_runner/` holds your earlier RT-only Python runner (`run_rt_tests.py`). It runs the same numerical tests as step 2, so you don't need it. Use one or the other, and never both at once.

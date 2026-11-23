@@ -18,6 +18,8 @@ sudo bash week1.sh                 # guided: runs every Week 1 test in order
 | 4 | `blink_v7` sweep (half-period 500000 → 1000 ns, i.e. 1 kHz → 500 kHz), unloaded then loaded | yes | ~15 min |
 | 5 | Build `results/REPORT.md` | no | seconds |
 
+**No oscilloscope?** `sudo bash week1_noscope.sh` runs only the tool check, perf + cyclictest and the report, with no pauses (`--quick` for a 2-min check, `--load 8` for a lighter load).
+
 Other commands:
 
 ```bash
